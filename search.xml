@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>centos_install_python</title>
+      <link href="/2019/03/04/centos-install-python/"/>
+      <url>/2019/03/04/centos-install-python/</url>
+      
+        <content type="html"><![CDATA[<p>CentOS 7 安装Django环境</p><h2 id="安装MySQl"><a href="#安装MySQl" class="headerlink" title="安装MySQl"></a>安装MySQl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm</span><br><span class="line">yum -y install mysql-community-server</span><br><span class="line">systemctl start mysqld</span><br><span class="line">systemctl <span class="built_in">enable</span> mysqld</span><br><span class="line">netstat -plntu</span><br><span class="line">systemctl is-enabled mysqld</span><br><span class="line">grep <span class="string">'temporary'</span> /var/<span class="built_in">log</span>/mysqld.log</span><br><span class="line">mysql -u root -p</span><br><span class="line">TYPE DEFAULT PASSWORD</span><br><span class="line">ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'Newhakase-labs123@'</span>;</span><br><span class="line">flush privileges;</span><br><span class="line">-- upgrade from old version, please backup data at first</span><br><span class="line">mysql_upgrade -u root -p</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我的播客测试2</title>
       <link href="/2019/03/04/hello-world/"/>
       <url>/2019/03/04/hello-world/</url>
