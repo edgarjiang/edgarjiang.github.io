@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Edgar&#39;s Blog">
 <meta property="og:description" content="1. 安装MySQl12345678910111213yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpmyum -y install mysql-community-serversystemctl start mysqldsystemctl enable mysqldnetsta">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-04T07:58:08.941Z">
+<meta property="og:updated_time" content="2019-03-04T07:59:47.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS下Django部属">
 <meta name="twitter:description" content="1. 安装MySQl12345678910111213yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpmyum -y install mysql-community-serversystemctl start mysqldsystemctl enable mysqldnetsta">
@@ -92,13 +92,13 @@
 <h2 id="2-安装Python2-Python3"><a href="#2-安装Python2-Python3" class="headerlink" title="2. 安装Python2 / Python3"></a>2. 安装Python2 / Python3</h2><h3 id="2-1-安装python-27"><a href="#2-1-安装python-27" class="headerlink" title="2.1 安装python 27"></a>2.1 安装python 27</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br><span class="line">yum -y install python-pip</span><br><span class="line">yum -y install python-virtualenv</span><br><span class="line">yum -y install python-virtualenvwrapper</span><br></pre></td></tr></table></figure>
 <h3 id="2-2-安装python-35"><a href="#2-2-安装python-35" class="headerlink" title="2.2 安装python 35"></a>2.2 安装python 35</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install centos-release-scl</span><br></pre></td></tr></table></figure>
 <p>可选择安装如下版本中的一个:<br>   Python 3.3<br>   Python 3.4<br>   Python 3.5<br>   Python 3.6<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install rh-python35</span><br><span class="line">scl <span class="built_in">enable</span> rh-python35 bash</span><br></pre></td></tr></table></figure></p>
-<h2 id="3-1-CentOS的防火墙配置"><a href="#3-1-CentOS的防火墙配置" class="headerlink" title="3.1 CentOS的防火墙配置"></a>3.1 CentOS的防火墙配置</h2><p>这里开启了8000端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --get-active-zones  </span><br><span class="line">firewall-cmd --zone=public --list-ports</span><br><span class="line">firewall-cmd --zone=public --permanent --add-port=8000/tcp</span><br></pre></td></tr></table></figure></p>
-<h2 id="Django配合gunicorn的启动脚本"><a href="#Django配合gunicorn的启动脚本" class="headerlink" title="Django配合gunicorn的启动脚本"></a>Django配合gunicorn的启动脚本</h2><p>start.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scl <span class="built_in">enable</span> rh-python35  <span class="string">"source /root/task_management/venv/bin/activate &amp;&amp; gunicorn -w 8  --bind 0.0.0.0:8000 api.wsgi"</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="3-CentOS的防火墙配置"><a href="#3-CentOS的防火墙配置" class="headerlink" title="3. CentOS的防火墙配置"></a>3. CentOS的防火墙配置</h2><p>这里开启了8000端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --get-active-zones  </span><br><span class="line">firewall-cmd --zone=public --list-ports</span><br><span class="line">firewall-cmd --zone=public --permanent --add-port=8000/tcp</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-Django配合gunicorn的启动脚本"><a href="#4-Django配合gunicorn的启动脚本" class="headerlink" title="4. Django配合gunicorn的启动脚本"></a>4. Django配合gunicorn的启动脚本</h2><p>start.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scl <span class="built_in">enable</span> rh-python35  <span class="string">"source /root/task_management/venv/bin/activate &amp;&amp; gunicorn -w 8  --bind 0.0.0.0:8000 api.wsgi"</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/04/centos-install-python/" data-id="cjsu1yerd0000dl212eqv6r4a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/04/centos-install-python/" data-id="cjsu20jy00000hk21w4dwtfiv" class="article-share-link">Share</a>
       
       
     </footer>
