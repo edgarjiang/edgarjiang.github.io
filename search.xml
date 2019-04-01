@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>share_printer</title>
+      <link href="/2019/04/01/share-printer/"/>
+      <url>/2019/04/01/share-printer/</url>
+      
+        <content type="html"><![CDATA[<p>打印机的2个重要命令：</p><p>查看打印机信息：lpstat -p</p><p>命令行打印文件：sudo lpr -P打印机名 要打印的文件名</p><p>ps：sudo lpr -PHP_LaserJet_Professional_M1136_MFP zy.txt</p><p>==添加打印机设备==</p><p>【型号：HP_LaserJet_Professional_M1136_MFP】<br>【系统：Ubuntu 14.04 LTS】</p><h1 id="安装打印机驱动"><a href="#安装打印机驱动" class="headerlink" title="安装打印机驱动"></a>安装打印机驱动</h1><h2 id="1-将电源和USB线全部连接好"><a href="#1-将电源和USB线全部连接好" class="headerlink" title="1.将电源和USB线全部连接好"></a>1.将电源和USB线全部连接好</h2><h2 id="2-安装hp-plugin"><a href="#2-安装hp-plugin" class="headerlink" title="2.安装hp-plugin"></a>2.安装hp-plugin</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install hplip-gui</span><br><span class="line"></span><br><span class="line">sudo apt-get install hplip build</span><br></pre></td></tr></table></figure><h2 id="3-安装打印机驱动"><a href="#3-安装打印机驱动" class="headerlink" title="3.安装打印机驱动"></a>3.安装打印机驱动</h2> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> sudo hp-setup</span><br><span class="line">一直点击Next即可</span><br></pre></td></tr></table></figure><h2 id="4-查看驱动是否安装成功"><a href="#4-查看驱动是否安装成功" class="headerlink" title="4.查看驱动是否安装成功"></a>4.查看驱动是否安装成功</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lpstat -p</span><br></pre></td></tr></table></figure><p>如果出现打印机型号、日期等信息说明驱动安装成功</p><p>5.打印测试页</p><h1 id="共享打印机设置"><a href="#共享打印机设置" class="headerlink" title="共享打印机设置"></a>共享打印机设置</h1><h2 id="1-安装cups"><a href="#1-安装cups" class="headerlink" title="1.安装cups"></a>1.安装cups</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cups</span><br></pre></td></tr></table></figure><h2 id="2-通过浏览器访问http-127-0-0-1-631-进入administrator页签-右侧Server栏下-勾选”Share-printers-connected-to-this-system”-这样默认是在本地网络上共享打印机-只有同一个网段的主机才能通过网络使用这台打印机。如果同时勾选了”Allow-printing-from-the-Internet”-则所有通过网络可以访问这台主机的机器都可以使用这台打印机。"><a href="#2-通过浏览器访问http-127-0-0-1-631-进入administrator页签-右侧Server栏下-勾选”Share-printers-connected-to-this-system”-这样默认是在本地网络上共享打印机-只有同一个网段的主机才能通过网络使用这台打印机。如果同时勾选了”Allow-printing-from-the-Internet”-则所有通过网络可以访问这台主机的机器都可以使用这台打印机。" class="headerlink" title="2.通过浏览器访问http://127.0.0.1:631,进入administrator页签,右侧Server栏下,勾选”Share printers connected to this system”,这样默认是在本地网络上共享打印机,只有同一个网段的主机才能通过网络使用这台打印机。如果同时勾选了”Allow printing from the Internet”,则所有通过网络可以访问这台主机的机器都可以使用这台打印机。"></a>2.通过浏览器访问<a href="http://127.0.0.1:631,进入administrator页签,右侧Server栏下,勾选”Share" target="_blank" rel="noopener">http://127.0.0.1:631,进入administrator页签,右侧Server栏下,勾选”Share</a> printers connected to this system”,这样默认是在本地网络上共享打印机,只有同一个网段的主机才能通过网络使用这台打印机。如果同时勾选了”Allow printing from the Internet”,则所有通过网络可以访问这台主机的机器都可以使用这台打印机。</h2><h2 id="3-客户端连接"><a href="#3-客户端连接" class="headerlink" title="3.客户端连接"></a>3.客户端连接</h2><p>①如果是Ubuntu 14.04 LTS系统，不需要任何配置，直接打印 —&gt; 选择打印机名字即可</p><p>②如果Windows 系统，打开控制面板【添加打印机】【网络打印机】在【选择打印机】列表中选择<br> 共享打印机服务器的名字或IP\HP_LaserJet_Professional_M1136_MFP</p><p>下一步安装打印机的驱动就可以了，最好是提前安装打印机的驱动，注意型号要选择正确！</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>react 开发启动提示ENOSPC错误</title>
       <link href="/2019/03/05/nodejs-enospc/"/>
       <url>/2019/03/05/nodejs-enospc/</url>
