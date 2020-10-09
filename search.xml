@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2019/11/22/nginx/"/>
-      <url>/2019/11/22/nginx/</url>
-      
-        <content type="html"><![CDATA[<p>centos7</p><p>sudo yum install -y –enablerepo=”epel” python-pip<br><a href="https://www.tecmint.com/setup-https-with-lets-encrypt-ssl-certificate-for-nginx-on-centos/" target="_blank" rel="noopener">https://www.tecmint.com/setup-https-with-lets-encrypt-ssl-certificate-for-nginx-on-centos/</a></p><p>godaddy<br>原域名服务器<br>ns29.domaincontrol.com<br>ns30.domaincontrol.com</p><p>cloudflare<br>connie.ns.cloudflare.com<br>dale.ns.cloudflare.com</p><p>gost -L ss://aes-128-cfb:JianG1234561@:1984 -F ‘<a href="https://firefox:youtest!+you@0x666.nl:443&#39;" target="_blank" rel="noopener">https://firefox:youtest!+you@0x666.nl:443&#39;</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Ubuntu 下共享打印机</title>
       <link href="/2019/04/01/share-printer/"/>
       <url>/2019/04/01/share-printer/</url>
